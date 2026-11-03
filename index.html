@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Catálogo de trufas, cones trufados e ovos de Páscoa artesanais." />
+  <meta name="theme-color" content="#2d1712" />
+  <meta property="og:title" content="Doce & Afeto | Catálogo artesanal" />
+  <meta property="og:description" content="Trufas, cones trufados e ovos de Páscoa artesanais." />
+  <meta property="og:image" content="assets/images/hero-chocolates.jpg" />
+  <title>Doce & Afeto | Catálogo artesanal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/images/hero-chocolates.jpg" as="image" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#catalogo">Ir para o catálogo</a>
+
+  <header class="site-header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="Doce e Afeto, início"><span class="brand-name">Doce &amp; Afeto</span><small>CATÁLOGO ARTESANAL</small></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="#trufas">Trufas</a>
+      <a href="#cones">Cones trufados</a>
+      <a class="easter-link" href="#ovos">Ovos de Páscoa</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Confeitaria artesanal</p>
+        <h1 id="hero-title">Um cardápio feito para despertar vontade.</h1>
+        <p>Conheça os sabores, tamanhos e valores das nossas trufas, cones trufados e ovos de Páscoa.</p>
+        <a class="text-cta" href="#catalogo">Ver o cardápio <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="hero-image"><img src="assets/images/hero-chocolates.jpg" width="1600" height="1000" alt="Trufas, cones e ovos artesanais de chocolate" fetchpriority="high" /></div>
+    </section>
+
+    <section class="category-nav" aria-label="Categorias do catálogo">
+      <a href="#trufas" class="category-link"><img src="assets/images/trufas-artesanais.jpg" loading="lazy" width="1000" height="1000" alt="Trufas artesanais" /><span><small>01</small><strong>Trufas</strong><em>Ver sabores</em></span></a>
+      <a href="#cones" class="category-link"><img src="assets/images/cones-e-ovos.jpg" loading="lazy" width="1000" height="1000" alt="Cone trufado com chocolate" /><span><small>02</small><strong>Cones trufados</strong><em>Ver sabores</em></span></a>
+      <a href="#ovos" class="category-link easter-link"><img src="assets/images/ovos-pascoa.jpg" loading="lazy" width="1000" height="1000" alt="Ovos de Páscoa artesanais" /><span><small>03</small><strong>Ovos de Páscoa</strong><em>Ver opções</em></span></a>
+    </section>
+
+    <section id="catalogo" class="catalog" aria-label="Cardápio de doces">
+      <header class="catalog-heading"><p class="eyebrow">Cardápio</p><h2>Doces da casa</h2><p>Fotos ilustrativas. Sabores, tamanhos e valores organizados para consulta.</p></header>
+
+      <section id="trufas" class="catalog-section" aria-labelledby="trufas-title">
+        <div class="section-intro"><div><p class="eyebrow">01 · Chocolate em cada detalhe</p><h2 id="trufas-title">Trufas</h2></div><p>Pequenas para uma pausa doce ou grandes para aproveitar ainda mais.</p></div>
+        <div class="filter-row" role="group" aria-label="Filtrar trufas por tamanho"><button class="filter active" type="button" data-filter="all" aria-pressed="true">Todas</button><button class="filter" type="button" data-filter="small" aria-pressed="false">Pequenas · R$ 3,00</button><button class="filter" type="button" data-filter="large" aria-pressed="false">Grandes · R$ 5,00</button></div>
+        <div id="truffle-grid" class="truffle-catalog"></div>
+      </section>
+
+      <section id="cones" class="catalog-section catalog-section--cream" aria-labelledby="cones-title">
+        <div class="section-intro"><div><p class="eyebrow">02 · Crocância e cremosidade</p><h2 id="cones-title">Cones trufados</h2></div><p>Casquinha crocante, recheio generoso e combinações que aparecem também na foto.</p></div>
+        <div id="cone-grid" class="product-grid"></div>
+      </section>
+
+      <section id="ovos" class="catalog-section eggs-section" aria-labelledby="ovos-title">
+        <div class="section-intro"><div><p class="eyebrow">Edição sazonal</p><h2 id="ovos-title">Ovos de Páscoa</h2></div><p>Uma foto, um sabor e suas gramaturas em cada opção.</p></div>
+        <div id="egg-grid" class="egg-catalog"></div>
+      </section>
+    </section>
+
+  </main>
+
+  <footer class="footer"><a class="brand" href="#inicio"><span class="brand-name">Doce &amp; Afeto</span><small>CATÁLOGO ARTESANAL</small></a><p>Trufas, cones trufados e ovos de Páscoa preparados com carinho.</p><nav aria-label="Navegação no rodapé"><a href="#trufas">Trufas</a><a href="#cones">Cones</a><a class="easter-link" href="#ovos">Ovos de Páscoa</a></nav><p class="copyright">© <span id="year"></span> <span class="brand-name">Doce &amp; Afeto</span>.</p></footer>
+
+  <template id="product-template"><article class="product-card"><figure><img loading="lazy" width="900" height="900" alt="" /><figcaption class="badge" hidden>Novidade</figcaption></figure><div class="product-card__body"><p class="product-kind"></p><h3></h3><p class="product-description"></p><strong class="price"></strong></div></article></template>
+  <script src="script.js"></script>
+</body>
+</html>
