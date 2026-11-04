@@ -109,7 +109,13 @@ const eggGrid = document.querySelector("#egg-grid");
 
 function productCard(product) {
   const fragment = productTemplate.content.cloneNode(true);
+  const card = fragment.querySelector(".product-card");
   const image = fragment.querySelector("img");
+
+  if (product.chocolate === "white") {
+    card.classList.add("product-card--white-chocolate");
+    card.dataset.productId = product.id;
+  }
 
   image.src = product.image;
   image.loading = "lazy";

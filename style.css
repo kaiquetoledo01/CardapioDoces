@@ -91,8 +91,13 @@ h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-optical-sizing: auto;
 
 /* Truffles have a little more space for the chocolate and toppings to show. */
 .truffle-catalog .product-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.1rem; }
-.truffle-catalog .product-card figure { height: 235px; }
+.truffle-catalog .product-card figure { height: 235px; padding: .35rem; }
+.truffle-catalog .product-card figure img { width: 100%; height: 100%; object-fit: contain; object-position: center center; }
 .truffle-catalog .product-card__body { min-height: 138px; padding: .95rem; }
+
+/* Each white-chocolate photo has its truffle slightly higher in the original frame. */
+.truffle-catalog .product-card--white-chocolate figure img { transform: translateY(6%); }
+.truffle-catalog .product-card--white-chocolate[data-product-id="t-sensacao-p"] figure img { transform: translate(2%, 5%); }
 
 /* Cones use larger cards so the filled rim and cutaway remain easy to see. */
 #cone-grid.product-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; }
