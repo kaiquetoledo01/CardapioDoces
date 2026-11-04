@@ -89,6 +89,16 @@ h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-optical-sizing: auto;
 .product-description { display: -webkit-box; overflow: hidden; margin-bottom: .7rem; -webkit-box-orient: vertical; -webkit-line-clamp: 2; color: var(--muted); font-size: .76rem; line-height: 1.4; }
 .price { color: var(--cocoa); font-family: "Fraunces", Georgia, serif; font-size: 1.05rem; font-weight: 700; }
 
+/* Truffles have a little more space for the chocolate and toppings to show. */
+.truffle-catalog .product-grid { grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.1rem; }
+.truffle-catalog .product-card figure { height: 235px; }
+.truffle-catalog .product-card__body { min-height: 138px; padding: .95rem; }
+
+/* Cones use larger cards so the filled rim and cutaway remain easy to see. */
+#cone-grid.product-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.25rem; }
+#cone-grid .product-card figure { height: 270px; }
+#cone-grid .product-card__body { min-height: 140px; padding: 1rem; }
+
 .egg-catalog { max-width: 1040px; margin: auto; }
 .egg-group + .egg-group { margin-top: clamp(2.75rem, 5vw, 4rem); padding-top: clamp(2.75rem, 5vw, 4rem); border-top: 1px solid var(--line); }
 .egg-group__header { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, .7fr); align-items: end; gap: .5rem 2rem; margin-bottom: 1.25rem; }
@@ -133,6 +143,10 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
   .product-card figure { height: 165px; }
   .product-card__body { min-height: 136px; padding: .8rem; }
   .product-card h3 { font-size: 1rem; }
+  .truffle-catalog .product-grid { gap: .8rem; }
+  .truffle-catalog .product-card figure { height: 180px; }
+  #cone-grid.product-grid { gap: .9rem; }
+  #cone-grid .product-card figure { height: 200px; }
   .egg-group__header { display: grid; gap: .55rem; }
   .egg-group__header .eyebrow { grid-column: auto; }
   .egg-group__products { grid-template-columns: 1fr; max-width: 400px; }
@@ -145,6 +159,10 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
 @media (max-width: 390px) {
   .product-grid { grid-template-columns: 1fr; max-width: 260px; }
   .product-card figure { height: 210px; }
+  .truffle-catalog .product-grid { max-width: 280px; }
+  .truffle-catalog .product-card figure { height: 240px; }
+  #cone-grid.product-grid { max-width: 320px; }
+  #cone-grid .product-card figure { height: 280px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
