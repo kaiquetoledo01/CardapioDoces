@@ -1,7 +1,7 @@
 :root {
   --cocoa: #2d1712;
   --brown: #59372a;
-  --caramel: #b9783e;
+  --caramel: #935025;
   --gold: #d7af70;
   --cream: #fffaf2;
   --sand: #f0e1ce;
@@ -173,3 +173,80 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
 }
+/* Warm confectionery art direction */
+[hidden] { display: none !important; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.site-header { min-height: 84px; }
+.brand { font-size: 1.65rem; }
+.hero { position: relative; isolation: isolate; min-height: 650px; display: flex; background: #24120c; overflow: hidden; }
+.hero-image { position: absolute; z-index: -2; inset: 0; }
+.hero-image img { object-position: 65% center; }
+.hero::after { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgba(29,13,8,.94), rgba(29,13,8,.72) 32%, rgba(29,13,8,.08) 70%); }
+.hero-copy { max-width: 760px; width: 58%; padding: 5rem clamp(1.25rem, 7vw, 7rem); }
+.hero h1 { font-size: clamp(3.5rem, 6.4vw, 6rem); font-weight: 500; letter-spacing: -.055em; line-height: 1.04; }
+.hero h1 em { color: #efbf86; font-weight: 500; }
+.hero-copy > p:not(.eyebrow) { max-width: 380px; font-size: 1rem; }
+.text-cta { display: inline-flex; align-items: center; justify-content: center; gap: 1.8rem; border: 1px solid #efbd82; border-radius: 100px; padding: 1rem 1.6rem; background: #efbd82; color: #321b12; font-size: .9rem; box-shadow: 0 6px 25px #190c0630; transition: background .2s, transform .2s; }
+.text-cta span { color: inherit; }
+.text-cta:hover { background: #ffdbab; transform: translateY(-2px); }
+.hero-copy > .hero-note { font-size: .75rem !important; margin: 1.3rem 0 0; color: #e7cdb9 !important; }
+.flavor-strip { display: flex; justify-content: center; align-items: center; gap: clamp(1rem,4vw,4rem); padding: 1.1rem; background: #ecd6b8; color: #643e27; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-align: center; }
+.flavor-strip [aria-hidden] { color: #a16d39; }
+.category-nav { max-width: 1370px; gap: 1.4rem; margin-block: 4rem; }
+.category-link { height: 300px; min-height: 0; border-radius: 14px; }
+.category-link::after { background: linear-gradient(0deg, #24130aeb, #24130a16 90%); }
+.category-link strong { font-family: 'Fraunces', Georgia, serif; font-size: 1.7rem; line-height: 1.15; }
+.category-link span { gap: .6rem; bottom: 1.6rem; left: 1.6rem; }
+.catalog { padding-top: 1rem; }
+.catalog-section { margin-top: 2rem; padding-block: 3.5rem; }
+.catalog-heading h2 { font-weight: 500; }
+.catalog-heading > p:last-child { max-width: 530px; margin-inline: auto; }
+.filter-row { justify-content: flex-start; margin-top: 0; }
+.filter { min-height: 44px; padding: .7rem 1.15rem; font-size: .82rem; }
+.truffle-catalog .product-grid, #cone-grid.product-grid { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 1.4rem; }
+.product-card, .egg-card { border-radius: 16px; background: #fffdf9; box-shadow: 0 8px 26px #59372a09; transition: transform .25s, box-shadow .25s; }
+.product-card figure, .truffle-catalog .product-card figure, #cone-grid .product-card figure { height: auto; aspect-ratio: 1.12; padding: 0; }
+.product-card figure img { transition: scale .45s; }
+.product-card__body, .truffle-catalog .product-card__body, #cone-grid .product-card__body { padding: 1.3rem; }
+.product-card h3 { font-size: 1.35rem; }
+.product-kind { font-size: .66rem; line-height: 1.5; }
+.product-description { display: block; overflow: visible; font-size: .88rem; line-height: 1.6; min-height: 2.8em; }
+.price { display: block; border-top: 1px solid var(--line); margin-top: 1rem; padding-top: .8rem; font-size: 1.35rem; color: #78451f; }
+.egg-catalog { max-width: 1240px; }
+.egg-description { font-size: .88rem; line-height: 1.6; }
+.egg-prices div { font-size: .9rem; }
+.sweet-ending { padding: 5rem 1rem; text-align: center; background: radial-gradient(ellipse at center,#52301e,#2d1712); color: #fff1df; }
+.sweet-ending .eyebrow { color: #efbf86; }
+.sweet-ending h2 { font-weight: 500; font-size: clamp(2.3rem,5vw,4rem); line-height: 1.15; }
+.sweet-ending .text-cta { margin-inline: auto; }
+.photo-note { text-align: center; font-size: .75rem; color: var(--muted); padding: 1rem; margin: 0; }
+.footer .brand-name { color: #efbf86; }
+@media (hover: hover) { .product-card:hover, .egg-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px #59372a18; } .product-card:hover figure img { scale: 1.04; } }
+@media (max-width: 1000px) and (min-width: 761px) { .hero-copy { width: 70%; } .category-link { height: 260px; } .truffle-catalog .product-grid, #cone-grid.product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 760px) {
+  .site-header { min-height: 66px; }
+  .hero { min-height: 690px; align-items: flex-start; }
+  .hero-copy { width: 100%; padding: 3rem 1.5rem; min-height: auto; }
+  .hero h1 { font-size: clamp(3.5rem,12vw,5rem); }
+  .hero-copy > p:not(.eyebrow) { max-width: 340px; }
+  .hero-image img { object-position: 70% bottom; object-fit: cover; }
+  .hero::after { background: linear-gradient(180deg,#24120cf5 0%,#24120ce0 40%,#24120c20 80%); }
+  .flavor-strip { font-size: .63rem; gap: .65rem; letter-spacing: .02em; }
+  .category-nav { grid-template-columns: 1fr; gap: .8rem; margin-block: 2rem; }
+  .category-link { height: 180px; }
+  .category-link img { object-position: center 55%; }
+  .category-link strong { font-size: 1.6rem; }
+  .catalog-section { padding: 2.5rem 1rem; }
+  .truffle-catalog .product-grid, #cone-grid.product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); max-width: none; gap: .75rem; }
+  .product-card__body, .truffle-catalog .product-card__body, #cone-grid .product-card__body { padding: .85rem; }
+  .product-card h3 { font-size: 1.1rem; }
+  .product-description { font-size: .8rem; }
+  .product-kind { font-size: .58rem; letter-spacing: .03em; }
+  .price { font-size: 1.2rem; }
+  .egg-group__header { grid-template-columns: 1fr; }
+  .egg-group__products { max-width: none; }
+  .egg-card { grid-template-columns: 42% 58%; grid-template-rows: auto; }
+  .egg-image { height: 100%; min-height: 260px; object-fit: contain; }
+  .egg-details { padding: .9rem; }
+}
+@media (max-width: 360px) { .truffle-catalog .product-grid, #cone-grid.product-grid { grid-template-columns: 1fr; } .egg-card { grid-template-columns: 1fr; } .egg-image { height: 250px; } }

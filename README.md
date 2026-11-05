@@ -29,3 +29,13 @@ style.css         layout responsivo e visual editorial
 script.js         catálogo, filtros e informações dos produtos
 assets/images/    fotos de todos os doces
 ```
+
+## Melhorias de apresentação — novembro de 2026
+
+A abertura usa a fotografia em destaque, cores de chocolate e caramelo e uma chamada para explorar os doces. Os cards têm imagens maiores, preços destacados e textos legíveis. No celular, as trufas e os cones aparecem em duas colunas (uma em telas muito estreitas).
+
+Os filtros anunciam a atualização para leitores de tela. O menu fecha com Esc ou clique fora, e o modo de movimento reduzido é respeitado. `CONFIG.showEasterProducts` oculta a seção e seus links.
+
+As imagens PNG possuem cópias JPEG otimizadas, usadas pelo catálogo. Os PNG originais foram preservados para futuras edições. Ao trocar uma foto, verifique o caminho efetivamente utilizado em `IMAGES`.
+
+Validação: sintaxe JavaScript, referências locais e dados do catálogo verificados. A revisão visual em navegador e celular continua pendente, pois o serviço de navegador estava indisponível nesta sessão.
