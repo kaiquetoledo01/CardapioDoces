@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Casquinhas crocantes e recheios cremosos. Explore os sabores e preços dos nossos cones trufados." />
+  <meta name="theme-color" content="#2d1712" />
+  <meta property="og:title" content="Cones trufados | Doce &amp; Afeto" />
+  <meta property="og:description" content="Casquinhas crocantes e recheios cremosos. Explore os sabores e preços dos nossos cones trufados." />
+  <meta property="og:image" content="assets/images/hero-chocolates.jpg" />
+  <title>Cones trufados | Doce &amp; Afeto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Nunito+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="category-page" data-page-title="Cones trufados">
+  <a class="skip-link" href="#cones">Ir para os doces</a>
+  <header class="site-header" id="inicio">
+    <a class="brand" href="index.html" aria-label="Doce e Afeto, início"><span class="brand-name">Doce &amp; Afeto</span><small>CATÁLOGO ARTESANAL</small></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="trufas.html">Trufas</a>
+      <a href="cones.html" aria-current="page">Cones trufados</a>
+      <a class="easter-link" href="ovos.html">Ovos de Páscoa</a>
+    </nav>
+  </header>
+
+  <main>
+    <nav class="breadcrumb" aria-label="Caminho da página"><a href="index.html#catalogo">← Voltar às categorias</a><span aria-current="page">Cones trufados</span></nav>
+      <section id="cones" class="catalog-section catalog-section--cream" aria-labelledby="cones-title">
+        <div class="section-intro"><div><p class="eyebrow">02 · Crocância e cremosidade</p><h1 id="cones-title">Cones trufados</h1></div><p>Primeiro, a crocância da casquinha. Depois, aquele recheio cremoso que faz você querer mais uma mordida.</p></div>
+        <div id="cone-grid" class="cone-catalog"></div>
+      </section>
+    <p class="photo-note">Fotos ilustrativas. A apresentação dos doces pode variar.</p>
+    <noscript><p class="photo-note">Ative o JavaScript para consultar todos os sabores e preços do catálogo.</p></noscript>
+  </main>
+  <footer class="footer"><a class="brand" href="index.html"><span class="brand-name">Doce &amp; Afeto</span><small>CATÁLOGO ARTESANAL</small></a><p>Trufas, cones trufados e ovos de Páscoa preparados com carinho.</p><nav aria-label="Navegação no rodapé"><a href="trufas.html">Trufas</a><a href="cones.html">Cones</a><a class="easter-link" href="ovos.html">Ovos de Páscoa</a></nav><p class="copyright">© <span id="year"></span> <span class="brand-name">Doce &amp; Afeto</span>.</p></footer>
+
+  <template id="product-template"><article class="product-card"><figure><img loading="lazy" width="900" height="900" alt="" /><figcaption class="badge" hidden>Novidade</figcaption></figure><div class="product-card__body"><p class="product-kind"></p><h3></h3><p class="product-description"></p><strong class="price"></strong></div></article></template>
+  <script src="script.js"></script>
+</body>
+</html>

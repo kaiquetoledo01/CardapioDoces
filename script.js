@@ -27,23 +27,23 @@ const IMAGES = {
   coneCookies: "assets/images/cone-cookies-cream.jpg",
   coneCookiesTruffled: "assets/images/cone-cookies-cream-trufado.jpg",
   coneCookiesTruffledV2: "assets/images/cone-cookies-cream-trufado-v2.jpg",
-  coneCookiesTruffledV3: "assets/images/cone-cookies-cream-trufado-v3.jpg",
-  coneAlpinoTruffled: "assets/images/cone-alpino-trufado.jpg",
-  coneNinhoTruffled: "assets/images/cone-ninho-alpino-trufado.jpg",
-  conePrestigeTruffled: "assets/images/cone-prestigio-trufado.jpg",
-  coneOvomaltineTruffled: "assets/images/cone-ovomaltine-trufado.jpg",
-  coneFerreroTruffled: "assets/images/cone-ferrero-trufado.jpg",
-  coneKinderTruffled: "assets/images/cone-kinder-trufado.jpg",
-  eggAlpino: "assets/images/ovos/ovo-alpino.jpg",
-  eggNinhoAlpino: "assets/images/ovos/ovo-ninho-alpino.jpg",
-  eggPrestige: "assets/images/ovos/ovo-prestigio.jpg",
-  eggOvomaltine: "assets/images/ovos/ovo-ovomaltine.jpg",
-  eggOreo: "assets/images/ovos/ovo-oreo.jpg",
-  eggFerrero: "assets/images/ovos/ovo-ferrero.jpg",
-  eggNinho: "assets/images/ovos/ovo-ninho.jpg",
-  shellMilkChocolate: "assets/images/ovos/casca-chocolate-leite.jpg",
-  shellWhiteChocolate: "assets/images/ovos/casca-chocolate-branco.jpg",
-  shellCrunchy: "assets/images/ovos/casca-crocante.jpg",
+  coneCookiesTruffledV3: "assets/images/cones/cookies-identidade.jpg",
+  coneAlpinoTruffled: "assets/images/cones/alpino-identidade.jpg",
+  coneNinhoTruffled: "assets/images/cones/ninho-identidade.jpg",
+  conePrestigeTruffled: "assets/images/cones/prestigio-identidade.jpg",
+  coneOvomaltineTruffled: "assets/images/cones/ovomaltine-identidade.jpg",
+  coneFerreroTruffled: "assets/images/cones/ferrero-identidade.jpg",
+  coneKinderTruffled: "assets/images/cones/kinder-identidade.jpg",
+  eggAlpino: "assets/images/ovos/identidade/ovo-alpino-identidade.jpg",
+  eggNinhoAlpino: "assets/images/ovos/identidade/ovo-ninho-alpino-identidade.jpg",
+  eggPrestige: "assets/images/ovos/identidade/ovo-prestigio-identidade.jpg",
+  eggOvomaltine: "assets/images/ovos/identidade/ovo-ovomaltine-identidade.jpg",
+  eggOreo: "assets/images/ovos/identidade/ovo-oreo-identidade.jpg",
+  eggFerrero: "assets/images/ovos/identidade/ovo-ferrero-identidade.jpg",
+  eggNinho: "assets/images/ovos/identidade/ovo-ninho-identidade.jpg",
+  shellMilkChocolate: "assets/images/ovos/identidade/casca-chocolate-leite-identidade.jpg",
+  shellWhiteChocolate: "assets/images/ovos/identidade/casca-chocolate-branco-identidade.jpg",
+  shellCrunchy: "assets/images/ovos/identidade/casca-crocante-identidade.jpg",
 };
 
 const PRODUCTS = [
@@ -130,6 +130,7 @@ function productCard(product) {
 }
 
 function renderTruffles(filter = "all") {
+  if (!truffleGrid) return;
   truffleGrid.replaceChildren();
 
   TRUFFLE_GROUPS.filter((group) => filter === "all" || group.id === filter).forEach((group) => {
@@ -167,12 +168,38 @@ function renderTruffles(filter = "all") {
 }
 
 function renderCones() {
+  if (!coneGrid) return;
   coneGrid.replaceChildren();
-  PRODUCTS.filter((product) => product.category === "cone")
-    .forEach((product) => coneGrid.append(productCard(product)));
+  const cones = PRODUCTS.filter((product) => product.category === "cone");
+  [
+    { id: "tradicionais", name: "Tradicionais", price: 8 },
+    { id: "especiais", name: "Especiais", price: 10 },
+  ].forEach((group) => {
+    const products = cones.filter((product) => product.price === group.price);
+    if (!products.length) return;
+
+    const section = document.createElement("section");
+    section.className = "cone-group";
+    section.setAttribute("aria-labelledby", `cones-${group.id}`);
+    const header = document.createElement("header");
+    header.className = "cone-group__header";
+    const title = document.createElement("h2");
+    title.id = `cones-${group.id}`;
+    title.textContent = group.name;
+    const price = document.createElement("strong");
+    price.textContent = money.format(group.price);
+    header.append(title, price);
+
+    const cards = document.createElement("div");
+    cards.className = "product-grid";
+    products.forEach((product) => cards.append(productCard(product)));
+    section.append(header, cards);
+    coneGrid.append(section);
+  });
 }
 
 function renderEggs() {
+  if (!eggGrid || !CONFIG.showEasterProducts) return;
   eggGrid.replaceChildren();
 
   EGG_GROUPS.forEach((group) => {
@@ -199,8 +226,10 @@ function renderEggs() {
     const image = document.createElement("img");
     image.className = "egg-image";
     image.src = egg.image;
+    image.width = 1000;
+    image.height = 1000;
     image.loading = "lazy";
-  image.decoding = "async";
+    image.decoding = "async";
     image.alt = `${egg.kind}: ${egg.name}`;
 
     const details = document.createElement("div");
@@ -238,9 +267,9 @@ function configureBrand() {
   document.querySelectorAll(".brand-name").forEach((node) => {
     node.textContent = CONFIG.brandName;
   });
-  document.title = `${CONFIG.brandName} | Cardápio artesanal`;
-  document.querySelector('meta[name="description"]').content =
-    `Cardápio visual da ${CONFIG.brandName}: trufas, cones recheados e ovos de Páscoa artesanais.`;
+  const pageTitle = document.body.dataset.pageTitle || "Cardápio artesanal";
+  document.title = `${CONFIG.brandName} | ${pageTitle}`;
+  document.querySelector('meta[property="og:title"]').content = document.title;
   document.querySelector("#year").textContent = new Date().getFullYear();
 }
 

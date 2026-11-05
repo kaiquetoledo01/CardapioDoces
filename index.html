@@ -19,12 +19,12 @@
   <a class="skip-link" href="#catalogo">Ir para o catálogo</a>
 
   <header class="site-header" id="inicio">
-    <a class="brand" href="#inicio" aria-label="Doce e Afeto, início"><span class="brand-name">Doce &amp; Afeto</span><small>CATÁLOGO ARTESANAL</small></a>
+    <a class="brand" href="index.html" aria-label="Doce e Afeto, início"><span class="brand-name">Doce &amp; Afeto</span><small>CATÁLOGO ARTESANAL</small></a>
     <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">☰</button>
     <nav class="menu" id="menu" aria-label="Navegação principal">
-      <a href="#trufas">Trufas</a>
-      <a href="#cones">Cones trufados</a>
-      <a class="easter-link" href="#ovos">Ovos de Páscoa</a>
+      <a href="trufas.html">Trufas</a>
+      <a href="cones.html">Cones trufados</a>
+      <a class="easter-link" href="ovos.html">Ovos de Páscoa</a>
     </nav>
   </header>
 
@@ -42,41 +42,18 @@
 
     <div class="flavor-strip" aria-label="Uma pausa deliciosa"><span>Casquinhas crocantes</span><span aria-hidden="true">✦</span><span>Recheios cremosos</span><span aria-hidden="true">✦</span><span>Combinações irresistíveis</span></div>
 
-    <section class="category-nav" aria-label="Categorias do catálogo">
-      <a href="#trufas" class="category-link"><img src="assets/images/trufas-artesanais.jpg" loading="lazy" width="1000" height="1000" alt="Trufas artesanais" /><span><small>UMA PAUSA DOCE</small><strong>Pequenas tentações</strong><em>Descobrir as trufas →</em></span></a>
-      <a href="#cones" class="category-link"><img src="assets/images/cones-e-ovos.jpg" loading="lazy" width="1000" height="1000" alt="Cone trufado com chocolate" /><span><small>CROCÂNCIA + CREMOSIDADE</small><strong>Recheio até o fim</strong><em>Explorar os cones →</em></span></a>
-      <a href="#ovos" class="category-link easter-link"><img src="assets/images/ovos-pascoa.jpg" loading="lazy" width="1000" height="1000" alt="Ovos de Páscoa artesanais" /><span><small>03</small><strong>Ovos de Páscoa</strong><em>Ver opções</em></span></a>
+    <section id="catalogo" class="category-nav" aria-label="Categorias do catálogo">
+      <a href="trufas.html" class="category-link"><img src="assets/images/trufas-artesanais.jpg" loading="lazy" width="1000" height="1000" alt="Trufas artesanais" /><span><small>UMA PAUSA DOCE</small><strong>Pequenas tentações</strong><em>Trufas →</em></span></a>
+      <a href="cones.html" class="category-link"><img src="assets/images/cones-e-ovos.jpg" loading="lazy" width="1000" height="1000" alt="Cone trufado com chocolate" /><span><small>CROCÂNCIA + CREMOSIDADE</small><strong>Recheio até o fim</strong><em>Cones →</em></span></a>
+      <a href="ovos.html" class="category-link easter-link"><img src="assets/images/ovos-pascoa.jpg" loading="lazy" width="1000" height="1000" alt="Ovos de Páscoa artesanais" /><span><small>CHOCOLATE EM CADA COLHERADA</small><strong>Ovos de Páscoa</strong><em>Ovos →</em></span></a>
     </section>
 
-    <section id="catalogo" class="catalog" aria-label="Cardápio de doces">
-      <header class="catalog-heading"><p class="eyebrow">Cardápio</p><h2>Qual vai ser o seu?</h2><p>Chocolate intenso, coco cremoso ou aquele encontro de Ninho com Alpino. A parte difícil é escolher.</p></header>
-
-      <section id="trufas" class="catalog-section" aria-labelledby="trufas-title">
-        <div class="section-intro"><div><p class="eyebrow">01 · Chocolate em cada detalhe</p><h2 id="trufas-title">Trufas</h2></div><p>Pequenas para uma pausa doce ou grandes para aproveitar ainda mais.</p></div>
-        <div class="filter-row" role="group" aria-label="Filtrar trufas por tamanho"><button class="filter active" type="button" data-filter="all" aria-pressed="true">Todas</button><button class="filter" type="button" data-filter="small" aria-pressed="false">Pequenas · R$ 3,00</button><button class="filter" type="button" data-filter="large" aria-pressed="false">Grandes · R$ 5,00</button></div>
-        <p id="filter-status" class="sr-only" role="status" aria-live="polite"></p>
-        <div id="truffle-grid" class="truffle-catalog"></div>
-      </section>
-
-      <section id="cones" class="catalog-section catalog-section--cream" aria-labelledby="cones-title">
-        <div class="section-intro"><div><p class="eyebrow">02 · Crocância e cremosidade</p><h2 id="cones-title">Cones trufados</h2></div><p>Primeiro, a crocância da casquinha. Depois, aquele recheio cremoso que faz você querer mais uma mordida.</p></div>
-        <div id="cone-grid" class="product-grid"></div>
-      </section>
-
-      <section id="ovos" class="catalog-section eggs-section" aria-labelledby="ovos-title">
-        <div class="section-intro"><div><p class="eyebrow">Edição sazonal</p><h2 id="ovos-title">Ovos de Páscoa</h2></div><p>Camadas de chocolate e recheios para saborear devagar. Escolha seu sabor e descubra cada colherada.</p></div>
-        <div id="egg-grid" class="egg-catalog"></div>
-      </section>
-    </section>
-
-    <section class="sweet-ending"><p class="eyebrow">Permita-se uma pausa</p><h2>Seu dia merece<br />um pouco de doçura.</h2><a class="text-cta" href="#trufas">Encontrar meu favorito <span aria-hidden="true">✦</span></a></section>
-    <p class="photo-note">Fotos ilustrativas. A apresentação dos doces pode variar.</p>
-    <noscript><p class="photo-note">Ative o JavaScript para consultar todos os sabores e preços do catálogo.</p></noscript>
+    <section class="sweet-ending"><p class="eyebrow">Permita-se uma pausa</p><h2>Seu dia merece<br />um pouco de doçura.</h2><a class="text-cta" href="#catalogo">Encontrar meu favorito <span aria-hidden="true">✦</span></a></section>
+    <p class="photo-note">Fotos ilustrativas. A apresentação dos doces pode variar.</p>
   </main>
 
-  <footer class="footer"><a class="brand" href="#inicio"><span class="brand-name">Doce &amp; Afeto</span><small>CATÁLOGO ARTESANAL</small></a><p>Trufas, cones trufados e ovos de Páscoa preparados com carinho.</p><nav aria-label="Navegação no rodapé"><a href="#trufas">Trufas</a><a href="#cones">Cones</a><a class="easter-link" href="#ovos">Ovos de Páscoa</a></nav><p class="copyright">© <span id="year"></span> <span class="brand-name">Doce &amp; Afeto</span>.</p></footer>
-
-  <template id="product-template"><article class="product-card"><figure><img loading="lazy" width="900" height="900" alt="" /><figcaption class="badge" hidden>Novidade</figcaption></figure><div class="product-card__body"><p class="product-kind"></p><h3></h3><p class="product-description"></p><strong class="price"></strong></div></article></template>
+  <footer class="footer"><a class="brand" href="index.html"><span class="brand-name">Doce &amp; Afeto</span><small>CATÁLOGO ARTESANAL</small></a><p>Trufas, cones trufados e ovos de Páscoa preparados com carinho.</p><nav aria-label="Navegação no rodapé"><a href="trufas.html">Trufas</a><a href="cones.html">Cones</a><a class="easter-link" href="ovos.html">Ovos de Páscoa</a></nav><p class="copyright">© <span id="year"></span> <span class="brand-name">Doce &amp; Afeto</span>.</p></footer>
+
   <script src="script.js"></script>
 </body>
 </html>
