@@ -1,0 +1,47 @@
+{
+  "tool": "Built-in Imagegen",
+  "images": [
+    {
+      "id": "alpino",
+      "source": "C:\\Users\\ktoledo\\.codex\\generated_images\\01a1a8cc-e183-7662-adcd-d0ba2af4f7af\\exec-2b2e80a4-5141-40cd-915e-3f2117675ae2.png",
+      "destination": "assets/images/cones/alpino-identidade.jpg",
+      "prompt": "Create ONE square photorealistic professional food photography asset for a Brazilian artisan filled waffle cone catalog. Appetizing real confectionery, NOT ice cream: dense soft truffle filling, never frozen ice cream scoops. Clearly recognizable golden waffle cone with chocolate inner lining. Rich tactile textures, soft natural side lighting, shallow depth of field, no text, no labels, no packaging, no watermark, no people, no hands. Entire primary cone visible with comfortable 8% margins, fills about 75% image height, legible as a small catalog thumbnail. ALPINO CHOCOLATE identity. A chocolate-dipped cone resting diagonally on a dark cocoa slate with a generous shiny milk chocolate ganache rosette at its mouth, angular pieces of plain milk chocolate and elegant thick chocolate curls. A small cut-open segment in foreground reveals solid smooth chocolate filling. Deep warm dark brown backdrop, bronze highlights. Pure chocolate emphasis, no nuts, no white cream, no cookies."
+    },
+    {
+      "id": "ninho",
+      "source": "C:\\Users\\ktoledo\\.codex\\generated_images\\01a1a8cc-e183-7662-adcd-d0ba2af4f7af\\exec-2542cd94-93e7-4005-ab4e-766d930cdaa5.png",
+      "destination": "assets/images/cones/ninho-identidade.jpg",
+      "prompt": "Create ONE square photorealistic professional food photography asset for a Brazilian artisan filled waffle cone catalog. Appetizing real confectionery, NOT ice cream: dense soft truffle filling, never frozen ice cream scoops. Clearly recognizable golden waffle cone with chocolate inner lining. Rich tactile textures, soft natural side lighting, shallow depth of field, no text, no labels, no packaging, no watermark, no people, no hands. Entire primary cone visible with comfortable 8% margins, fills about 75% image height, legible as a small catalog thumbnail. NINHO WITH ALPINO identity. A cone lying at a gentle diagonal on cream ceramic, mouth prominently showing a sculpted two-tone swirl of ivory powdered-milk cream and milk chocolate ganache, dusting of fine milk powder and a few milk chocolate shards. One clean halved cone beside it exposes distinct creamy white and brown layers inside. Warm ivory linen backdrop, airy light mood. No coconut, no nuts, no cookies."
+    },
+    {
+      "id": "prestigio",
+      "source": "C:\\Users\\ktoledo\\.codex\\generated_images\\01a1a8cc-e183-7662-adcd-d0ba2af4f7af\\exec-7320c251-72bb-41c7-8c8d-deae9b96358f.png",
+      "destination": "assets/images/cones/prestigio-identidade.jpg",
+      "prompt": "Create ONE square photorealistic professional food photography asset for a Brazilian artisan filled waffle cone catalog. Appetizing real confectionery, NOT ice cream: dense soft truffle filling, never frozen ice cream scoops. Clearly recognizable golden waffle cone with chocolate inner lining. Rich tactile textures, soft natural side lighting, shallow depth of field, no text, no labels, no packaging, no watermark, no people, no hands. Entire primary cone visible with comfortable 8% margins, fills about 75% image height, legible as a small catalog thumbnail. PRESTIGIO COCONUT identity. One waffle cone resting horizontally with mouth facing camera on a pale weathered wooden board, lush moist shredded coconut filling topped with thin chocolate drizzle and flakes of coconut. A cut-open half reveals bright coconut cream inside its dark chocolate lining. A piece of freshly cracked coconut with visible white flesh in the background and coconut flakes on the board. Soft pale sage background, fresh tropical artisanal feeling. No nuts, no cookies."
+    },
+    {
+      "id": "ovomaltine",
+      "source": "C:\\Users\\ktoledo\\.codex\\generated_images\\01a1a8cc-e183-7662-adcd-d0ba2af4f7af\\exec-91294a1a-40ff-4749-82c6-664963977ecf.png",
+      "destination": "assets/images/cones/ovomaltine-identidade.jpg",
+      "prompt": "Create ONE square photorealistic professional food photography asset for a Brazilian artisan filled waffle cone catalog. Appetizing real confectionery, NOT ice cream: dense soft truffle filling, never frozen ice cream scoops. Clearly recognizable golden waffle cone with chocolate inner lining. Rich tactile textures, soft natural side lighting, shallow depth of field, no text, no labels, no packaging, no watermark, no people, no hands. Entire primary cone visible with comfortable 8% margins, fills about 75% image height, legible as a small catalog thumbnail. OVOMALTINE MALTED CHOCOLATE CRUNCH identity. Waffle cone on its side angled from lower left toward upper right, generously topped with rough textured chocolate malt cream and abundant small irregular crunchy dark malt crumbs, not nuts. A cut-open piece foreground shows crunchy flecks throughout chocolate filling. Some malt crunch crumbs and chocolate dust on warm terracotta plate. Deep caramel amber background. Distinct rugged crunchy texture, no white cream, no cookies, no hazelnuts."
+    },
+    {
+      "id": "ferrero",
+      "source": "C:\\Users\\ktoledo\\.codex\\generated_images\\01a1a8cc-e183-7662-adcd-d0ba2af4f7af\\exec-c7b4dbc8-4ca2-4d29-bb78-1dc46f98ed50.png",
+      "destination": "assets/images/cones/ferrero-identidade.jpg",
+      "prompt": "Create ONE square photorealistic professional food photography asset for a Brazilian artisan filled waffle cone catalog. Appetizing real confectionery, NOT ice cream: dense soft truffle filling, never frozen ice cream scoops. Clearly recognizable golden waffle cone with chocolate inner lining. Rich tactile textures, soft natural side lighting, shallow depth of field, no text, no labels, no packaging, no watermark, no people, no hands. Entire primary cone visible with comfortable 8% margins, fills about 75% image height, legible as a small catalog thumbnail. FERRERO CHOCOLATE HAZELNUT identity. Cone reclining on a small brushed brass plate, mouth facing foreground filled with silky hazelnut chocolate cream and a crown of toasted chopped hazelnuts and one small unwrapped chocolate hazelnut praline, thin chocolate ribbon. Two whole hazelnuts and cut halves on plate. Small cut section exposes brown praline filling with crunchy hazelnut fragments. Warm muted olive-brown background, luxurious gold highlights. No white cream, no cookies."
+    },
+    {
+      "id": "kinder",
+      "source": "C:\\Users\\ktoledo\\.codex\\generated_images\\01a1a8cc-e183-7662-adcd-d0ba2af4f7af\\exec-b6e90279-dacc-4fa7-9fb0-885ac7f9345c.png",
+      "destination": "assets/images/cones/kinder-identidade.jpg",
+      "prompt": "Create ONE square photorealistic professional food photography asset for a Brazilian artisan filled waffle cone catalog. Appetizing real confectionery, NOT ice cream: dense soft truffle filling, never frozen ice cream scoops. Clearly recognizable golden waffle cone with chocolate inner lining. Rich tactile textures, soft natural side lighting, shallow depth of field, no text, no labels, no packaging, no watermark, no people, no hands. Entire primary cone visible with comfortable 8% margins, fills about 75% image height, legible as a small catalog thumbnail. KINDER MILK AND CHOCOLATE identity. Cone lying diagonally on blush beige ceramic, generously piped ivory milk cream with fine milk chocolate ribbons, small rectangular chocolate bar pieces with visible white milk centers. A cut-open cone section shows a very clear creamy white center surrounded by milk chocolate lining. Soft dusty rose linen background. Gentle milk chocolate brown and ivory palette. No hazelnuts, no coconut, no cookies. The filling is soft dense milk cream, NOT ice cream."
+    },
+    {
+      "id": "cookies",
+      "source": "C:\\Users\\ktoledo\\.codex\\generated_images\\01a1a8cc-e183-7662-adcd-d0ba2af4f7af\\exec-40b708d3-e140-4db2-a36e-95d76c80f104.png",
+      "destination": "assets/images/cones/cookies-identidade.jpg",
+      "prompt": "Create ONE square photorealistic professional food photography asset for a Brazilian artisan filled waffle cone catalog. Appetizing real confectionery, NOT ice cream: dense soft truffle filling, never frozen ice cream scoops. Clearly recognizable golden waffle cone with chocolate inner lining. Rich tactile textures, soft natural side lighting, shallow depth of field, no text, no labels, no packaging, no watermark, no people, no hands. Entire primary cone visible with comfortable 8% margins, fills about 75% image height, legible as a small catalog thumbnail. COOKIES AND CREAM identity. Cone resting on blue-grey ceramic plate, top filled with dense ivory cream heavily speckled with dark cocoa cookie crumbs and chunky broken chocolate sandwich cookies, one half cookie visibly embedded. Small cutaway segment shows white cream with large dark cookie pieces inside chocolate shell. A broken chocolate sandwich cookie and crumbs on plate. Cool muted blue-grey background balances warm golden cone. Bold black and white contrast. No nuts, no coconut."
+    }
+  ]
+}
