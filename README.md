@@ -43,18 +43,24 @@ A abertura usa a fotografia em destaque, cores de chocolate e caramelo e uma cha
 
 Os filtros anunciam a atualização para leitores de tela. O menu fecha com Esc ou clique fora, e o modo de movimento reduzido é respeitado. `CONFIG.showEasterProducts` oculta a seção e seus links.
 
-As imagens PNG possuem cópias JPEG otimizadas, usadas pelo catálogo. Os PNG originais foram preservados para futuras edições. Ao trocar uma foto, verifique o caminho efetivamente utilizado em `IMAGES`.
+O catálogo usa imagens JPEG otimizadas. Ao trocar uma foto, verifique o caminho efetivamente utilizado em `IMAGES`.
 
-Validação: sintaxe JavaScript, referências locais e dados do catálogo verificados. A revisão visual em navegador e celular continua pendente, pois o serviço de navegador estava indisponível nesta sessão.
+Validação local em 6 de novembro de 2026: sintaxe JavaScript, referências locais e dados do catálogo verificados. A limpeza foi comparada no Chrome em 30 estados das quatro páginas, com larguras de 360, 390, 760, 1000 e 1440 px, incluindo filtros e menu. As oito capturas de tela antes e depois ficaram idênticas. A comparação usou fontes de fallback, com o carregamento do Google Fonts bloqueado.
 
 A página inicial apresenta as três categorias: **Pequenas tentações**, **Recheio até o fim** e **Ovos de Páscoa**. Cada botão abre sua própria página na mesma aba. Os produtos aparecem apenas na página correspondente. O menu, o rodapé e o link de retorno permitem navegar entre elas. Todas as páginas usam o mesmo `script.js` e `style.css`.
 
 ## Imagens dos cones
 
-Os sete sabores usam imagens ilustrativas geradas com Imagegen, em `assets/images/cones/*-identidade.jpg`. Cada sabor tem composição, ingredientes em destaque e cenário próprios. As imagens anteriores continuam em `assets/images/`. As instruções de geração estão em `assets/images/cones/prompts.json`.
+Os sete sabores usam imagens ilustrativas geradas com Imagegen, em `assets/images/cones/*-identidade.jpg`. Cada sabor tem composição, ingredientes em destaque e cenário próprios. As instruções de geração estão em `assets/images/cones/prompts.json`.
 
 ## Imagens dos ovos de Páscoa
 
-Os sete ovos recheados e as três cascas usam imagens ilustrativas criadas com Imagegen, em `assets/images/ovos/identidade/*-identidade.jpg`. Cada sabor tem recheio, cobertura e cenário próprios; as cascas mostram o interior vazio e a textura do chocolate. As versões anteriores estão preservadas em `assets/images/ovos/`. Os prompts completos estão em `assets/images/ovos/identidade/prompts.json`.
+Os sete ovos recheados e as três cascas usam imagens ilustrativas criadas com Imagegen, em `assets/images/ovos/identidade/*-identidade.jpg`. Cada sabor tem recheio, cobertura e cenário próprios; as cascas mostram o interior vazio e a textura do chocolate. Os prompts completos estão em `assets/images/ovos/identidade/prompts.json`.
 
 Os arquivos usados pelo site são JPEG otimizados. As imagens dos ovos aparecem inteiras, com proporção quadrada no desktop e adaptação ao card no celular.
+
+## Limpeza de partes sem uso
+
+Foram removidas 56 imagens antigas ou alternativas sem referências ativas (cerca de 60,8 MB), dez entradas não consumidas de `IMAGES`, 13 regras CSS sem elementos correspondentes e os selos ocultos de novidade que nunca eram ativados. O template de produtos também foi removido de `ovos.html`, pois os ovos são construídos diretamente por `renderEggs()`.
+
+Permanecem as 32 imagens utilizadas nas páginas e nos produtos, os prompts das imagens atuais, o servidor de prévia e `robots.txt`. Os dados dos produtos e o código das funções foram preservados, incluindo filtros, menu e configuração sazonal.
