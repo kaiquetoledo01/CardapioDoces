@@ -1,6 +1,6 @@
 # Doce & Afeto — cardápio artesanal
 
-Um site estático de apresentação para trufas, cones recheados e ovos de Páscoa. Ele funciona como um mostruário: não há carrinho, checkout, formulário de compra ou redirecionamento para pedido.
+Um site estático de apresentação para trufas, cones recheados, alfajores e ovos de Páscoa. Ele funciona como um mostruário: não há carrinho, checkout, formulário de compra ou redirecionamento para pedido.
 
 ## Abrir localmente
 
@@ -20,6 +20,7 @@ Depois, acesse o endereço informado no terminal.
 - `index.html`: estrutura, textos institucionais e navegação do cardápio.
 - `trufas.html`: trufas pequenas, grandes e de chocolate branco, com filtros por tamanho.
 - `cones.html`: catálogo de cones trufados.
+- `alfajores.html`: catálogo de alfajores; por enquanto, apenas doce de leite.
 - Os cones são separados por preço: **Tradicionais (R$ 8,00)** e **Especiais (R$ 10,00)**.
 - `ovos.html`: cascas e ovos de Páscoa recheados, com gramaturas e preços.
 
@@ -31,6 +32,7 @@ Para alterar uma foto, substitua o arquivo correspondente em `assets/images/` pr
 index.html        estrutura semântica do cardápio
 trufas.html       página das trufas
 cones.html        página dos cones
+alfajores.html    página dos alfajores
 ovos.html         página dos ovos de Páscoa
 style.css         layout responsivo e visual editorial
 script.js         catálogo, filtros e informações dos produtos
@@ -47,7 +49,7 @@ O catálogo usa imagens JPEG otimizadas. Ao trocar uma foto, verifique o caminho
 
 Validação local em 6 de novembro de 2026: sintaxe JavaScript, referências locais e dados do catálogo verificados. A limpeza foi comparada no Chrome em 30 estados das quatro páginas, com larguras de 360, 390, 760, 1000 e 1440 px, incluindo filtros e menu. As oito capturas de tela antes e depois ficaram idênticas. A comparação usou fontes de fallback, com o carregamento do Google Fonts bloqueado.
 
-A página inicial apresenta as três categorias: **Pequenas tentações**, **Recheio até o fim** e **Ovos de Páscoa**. Cada botão abre sua própria página na mesma aba. Os produtos aparecem apenas na página correspondente. O menu, o rodapé e o link de retorno permitem navegar entre elas. Todas as páginas usam o mesmo `script.js` e `style.css`.
+A página inicial apresenta as quatro categorias: **Pequenas tentações**, **Recheio até o fim**, **Camadas de carinho** e **Ovos de Páscoa**. Cada botão abre sua própria página na mesma aba. Os produtos aparecem apenas na página correspondente. O menu, o rodapé e o link de retorno permitem navegar entre elas. Todas as páginas usam o mesmo `script.js` e `style.css`.
 
 ## Imagens dos cones
 
@@ -63,4 +65,14 @@ Os arquivos usados pelo site são JPEG otimizados. As imagens dos ovos aparecem 
 
 Foram removidas 56 imagens antigas ou alternativas sem referências ativas (cerca de 60,8 MB), dez entradas não consumidas de `IMAGES`, 13 regras CSS sem elementos correspondentes e os selos ocultos de novidade que nunca eram ativados. O template de produtos também foi removido de `ovos.html`, pois os ovos são construídos diretamente por `renderEggs()`.
 
-Permanecem as 32 imagens utilizadas nas páginas e nos produtos, os prompts das imagens atuais, o servidor de prévia e `robots.txt`. Os dados dos produtos e o código das funções foram preservados, incluindo filtros, menu e configuração sazonal.
+Na limpeza, foram preservadas as 32 imagens então utilizadas nas páginas e nos produtos, os prompts das imagens atuais, o servidor de prévia e `robots.txt`. Os dados dos produtos e o código das funções foram preservados, incluindo filtros, menu e configuração sazonal.
+
+## Alfajores — 11 de novembro de 2026
+
+`alfajores.html` segue o padrão das demais categorias, com navegação, retorno às categorias e cards compartilhados. A página inicial, o menu e o rodapé de todas as páginas incluem o acesso aos alfajores. As categorias aparecem em quatro colunas no desktop, duas no tablet e uma no celular.
+
+O único sabor cadastrado é **Doce de Leite**, por **R$ 7,00**, em `PRODUCTS`, com `category: "alfajor"` e `price: 7`. Para alterar o valor, edite esse número, em reais.
+
+A imagem ilustrativa de doce de leite é `assets/images/alfajor-doce-de-leite.jpg`, usada na categoria e no produto. O prompt está em `assets/images/alfajores/prompts.json`.
+
+Validação: as cinco páginas foram verificadas no Chrome em sete larguras, de 320 a 1440 px, com testes de navegação, menu, filtros e configuração sazonal. Não houve erros de JavaScript, imagens ausentes ou cards ultrapassando a largura da tela. A revisão das capturas de desktop e celular usou fontes de fallback, com o Google Fonts bloqueado durante os testes.

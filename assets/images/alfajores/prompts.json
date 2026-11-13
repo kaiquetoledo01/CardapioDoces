@@ -1,0 +1,11 @@
+{
+  "tool": "Built-in Imagegen",
+  "images": [
+    {
+      "id": "alfajor-doce-de-leite",
+      "source": "C:\\Users\\ktoledo\\.codex\\generated_images\\01a1b11a-1766-7072-ad7b-c7c585f928ab\\exec-c62297e2-73b9-4106-9e8a-e27657e1ab32.png",
+      "destination": "assets/images/alfajor-doce-de-leite.jpg",
+      "prompt": "Use case: product-mockup. Asset type: square photorealistic food photograph for a Brazilian artisan confectionery website, used both as category card and alfajor product photo. Subject: authentic artisanal alfajores de doce de leite coated in milk chocolate. One whole round alfajor and one neatly cut half in foreground showing TWO soft pale golden crumbly biscuit layers sandwiching a generous thick caramel dulce de leche filling, with a fine real chocolate coating around the exterior. Another whole alfajor softly in background is optional if needed for composition. Recognizable compact layered alfajor geometry, not a chocolate truffle, not macarons, not cake, not sandwich ice cream. Warm appetizing editorial food photography, beige stone plate on cream linen, a few biscuit crumbs and chocolate shavings, soft natural side lighting, warm cocoa and caramel palette consistent with an elegant artisan chocolate catalog. Center the main cut-open alfajor and its layers in the middle 60% of the square frame, with safe margins so it remains recognizable in a wide cropped category card. Luxurious realistic textures, believable dense dulce de leche, shallow depth of field, clear image legible at thumbnail size. No text, labels, logos, hands, packaging or watermarks."
+    }
+  ]
+}

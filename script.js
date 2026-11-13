@@ -24,6 +24,7 @@ const IMAGES = {
   coneOvomaltineTruffled: "assets/images/cones/ovomaltine-identidade.jpg",
   coneFerreroTruffled: "assets/images/cones/ferrero-identidade.jpg",
   coneKinderTruffled: "assets/images/cones/kinder-identidade.jpg",
+  alfajorDulceDeLeche: "assets/images/alfajor-doce-de-leite.jpg",
   eggAlpino: "assets/images/ovos/identidade/ovo-alpino-identidade.jpg",
   eggNinhoAlpino: "assets/images/ovos/identidade/ovo-ninho-alpino-identidade.jpg",
   eggPrestige: "assets/images/ovos/identidade/ovo-prestigio-identidade.jpg",
@@ -57,6 +58,7 @@ const PRODUCTS = [
   { id: "c-ferrero", category: "cone", size: "Cone trufado", name: "Ferrero", price: 10, image: IMAGES.coneFerreroTruffled, description: "Brigadeiro gourmet com Nutella e pedacinhos crocantes de amendoim." },
   { id: "c-kinder", category: "cone", size: "Cone trufado", name: "Kinder", price: 10, image: IMAGES.coneKinderTruffled, description: "Recheio que combina a suavidade do leite com a intensidade da avelã, inspirado no chocolate Kinder Bueno." },
   { id: "c-cookies", category: "cone", size: "Cone trufado", name: "Cookies'N Cream", price: 10, image: IMAGES.coneCookiesTruffledV3, description: "Creme suave de chocolate branco com a crocância de gotas de biscoito de chocolate." },
+  { id: "a-doce-de-leite", category: "alfajor", size: "Alfajor artesanal", name: "Doce de Leite", price: 7, image: IMAGES.alfajorDulceDeLeche, description: "Duas camadas de biscoito macio, recheio cremoso de doce de leite e uma delicada cobertura de chocolate ao leite." },
 ];
 
 const TRUFFLE_GROUPS = [
@@ -95,6 +97,7 @@ const money = new Intl.NumberFormat(CONFIG.locale, {
 const productTemplate = document.querySelector("#product-template");
 const truffleGrid = document.querySelector("#truffle-grid");
 const coneGrid = document.querySelector("#cone-grid");
+const alfajorGrid = document.querySelector("#alfajor-grid");
 const eggGrid = document.querySelector("#egg-grid");
 
 function productCard(product) {
@@ -114,7 +117,7 @@ function productCard(product) {
   fragment.querySelector(".product-kind").textContent = product.size;
   fragment.querySelector("h3").textContent = product.name;
   fragment.querySelector(".product-description").textContent = product.description;
-  fragment.querySelector(".price").textContent = money.format(product.price);
+  fragment.querySelector(".price").textContent = Number.isFinite(product.price) ? money.format(product.price) : "Preço sob consulta";
 
   return fragment;
 }
@@ -185,6 +188,14 @@ function renderCones() {
     products.forEach((product) => cards.append(productCard(product)));
     section.append(header, cards);
     coneGrid.append(section);
+  });
+}
+
+function renderAlfajores() {
+  if (!alfajorGrid) return;
+  alfajorGrid.replaceChildren();
+  PRODUCTS.filter((product) => product.category === "alfajor").forEach((product) => {
+    alfajorGrid.append(productCard(product));
   });
 }
 
@@ -315,6 +326,7 @@ configureBrand();
 configureEasterVisibility();
 renderTruffles();
 renderCones();
+renderAlfajores();
 renderEggs();
 setupFilters();
 setupMobileMenu();
