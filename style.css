@@ -182,6 +182,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--gold); outline-
 .hero-copy > .hero-note { font-size: .75rem !important; margin: 1.3rem 0 0; color: #e7cdb9 !important; }
 .flavor-strip { display: flex; justify-content: center; align-items: center; gap: clamp(1rem,4vw,4rem); padding: 1.1rem; background: #ecd6b8; color: #643e27; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-align: center; }
 .flavor-strip [aria-hidden] { color: #a16d39; }
+.order-notice { padding: 1.25rem clamp(1rem, 5vw, 4rem); border-block: 1px solid var(--line); background: var(--sand); color: var(--brown); text-align: center; }
+.order-notice p { max-width: 64ch; margin: 0 auto; font-size: .9rem; line-height: 1.6; }
+.order-notice strong { display: block; margin-bottom: .25rem; color: var(--cocoa); }
 .category-nav { max-width: 1370px; gap: 1.4rem; margin-block: 4rem; }
 .category-link { height: 300px; min-height: 0; border-radius: 14px; }
 .category-link::after { background: linear-gradient(0deg, #24130aeb, #24130a16 90%); }
